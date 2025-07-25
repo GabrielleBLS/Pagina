@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Hoja de Vida</title>
+  <style>
+    :root {
+      --color-principal: #2F4156;
+      --color-secundario: #567C8D;
+      --color-fondo: #C8D9E6;
+      --color-cuerpo: #F5EFEB;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: var(--color-principal);
+      background: linear-gradient(135deg, #F5EFEB 0%, #C8D9E6 100%);
+      background-attachment: fixed;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 10% 20%, #567C8D22 0.5px, transparent 1px),
+                        radial-gradient(circle at 80% 70%, #2F415620 0.5px, transparent 1px);
+      background-size: 100px 100px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: var(--color-cuerpo);
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 15px;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .header img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--color-principal);
+    }
+
+    h1, h2 {
+      color: var(--color-principal);
+      margin: 0 0 10px 0;
+    }
+
+    .section {
+      margin-top: 25px;
+    }
+
+    .section h2 {
+      border-bottom: 2px solid var(--color-secundario);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .titulo {
+      font-weight: bold;
+      color: var(--color-secundario);
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header img {
+        margin-top: 10px;
+      }
+
+      .info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="info">
+        <h1>Beberly Gabriela de Lima Leal Sosa</h1>
+        <p><span class="titulo">Dirección:</span> Sector 4 Manzana E Lote 12</p>
+        <p><span class="titulo">Teléfono:</span> +502 3130 6606</p>
+        <p><span class="titulo">Correo electrónico:</span> Mildreslavalle2018.938@gmail.com</p>
+        <p><span class="titulo">Fecha de nacimiento:</span> 30 de agosto de 2006</p>
+      </div>
+      <img src="fotodeperfil.jpg" alt="Foto de perfil"/>
+    </div>
+
+    <div class="section">
+      <h2>Perfil Profesional</h2>
+      <p>Perito contador con orientación en computación, estudiante en el Colegio Mixto San Fernando. Apasionada por la contabilidad y con un enfoque en la mecanografía. Mi objetivo es crecer profesionalmente en el área contable, aplicando mis conocimientos técnicos y mi habilidad para el uso de herramientas informáticas.</p>
+    </div>
+
+    <div class="section">
+      <h2>Educación</h2>
+      <ul>
+        <li><strong>Perito Contador con orientación en computación</strong> – Colegio Mixto San Fernando (En curso)</li>
+        <li><strong>Mecanografía</strong> – Colegio Mixto San Fernando (2020-2021)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experiencia Laboral</h2>
+      <ul>
+        <li><strong>Estudiante</strong> – Colegio Mixto San Fernando (En curso)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Contabilidad</li>
+        <li>Dibujo tradicional y digital</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Inglés – Básico</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
